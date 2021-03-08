@@ -1,0 +1,83 @@
+.profile_img_div{
+    display: flex;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+    height: 160px;
+    width: 20%;
+    overflow: hidden;
+    transform: translateX(30%);
+    margin-bottom: 30px;
+}
+.profile_img_overlay{
+    top:0;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7); /* Black see-through */
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 10px;
+    padding-top: 35%;
+    padding-left: 18px;
+    text-align: center;
+}
+.profile_img_div:hover .profile_img_overlay{
+    opacity: 1;
+}
+.upload_btn:hover{
+    transition: .7s ease-in-out;
+    border-bottom: 1px solid red;
+    
+}
+.gallery_img_outerdiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width : 100%;
+    height: auto;
+        
+}
+.gallery_img_innerdiv{
+    position: absolute;
+    height: 100%;
+}
+.gallery_img_overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(54, 54, 54, 0.486);
+    transform: translateY(-100%);
+    z-index: 10;
+    width: 89.4%;
+    height: 100%;
+    height: 100%;
+    opacity: 0;
+    filter: blur(0px);
+    transition: 0.3s ease-in-out;
+}
+.gallery_img_innerdiv:hover .gallery_img_overlay{
+    opacity: 1;
+}
+
+.gallery_img_deleteBtn{
+    background-color: red;
+    transition: 0.3s ease-in-out;
+}
+
+.main_div{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.otherUserProfileFollow_btn{
+    transform: translateX(130%);
+    width: 120px;
+    height: 40px;
+}

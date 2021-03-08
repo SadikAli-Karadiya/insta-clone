@@ -1,0 +1,33 @@
+.signup_card {
+  border: 1px solid lightgray;
+  transform: translateY(18%);
+}
+.signup_card_body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup_card_body div {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.signup_card_body div input {
+  width: 75%;
+  border: 1px solid lightgray;
+  height: 40px;
+  outline: none;
+  padding-left: 10px;
+  font-size: 13px;
+}
+.signup_card_body div input:focus {
+  border: 1px solid rgb(107, 104, 104);
+}
+
+.signup_card_body div input::placeholder {
+  color: rgb(172, 170, 170);
+}
+/* .signup_card_body div input:focus::placeholder{
+    color: transparent;
+} */
