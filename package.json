@@ -29,8 +29,8 @@
   },
   "scripts": {
     "start": "node app.js",
-    "build": "cd frontend && npm run build",
-    "install-client": "cd frontend && npm install",
+    "build":"cd frontend && npm run build",
+    "install-client":"cd frontend && npm install",
     "heroku-postbuild": "npm run install-client && npm run build"
   },
   "keywords": [],

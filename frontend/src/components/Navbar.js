@@ -32,6 +32,7 @@ function Navbar() {
     axios.post('/search-user', {searchQuery}, {headers:{ Authorization:'Bearer ' + localStorage.getItem('jwt')}})
     .then(res=>{
       setSearchData(res.data)
+      
     })
     .catch(error=>{
       console.log(error)
@@ -41,10 +42,16 @@ function Navbar() {
 
   const showAndHideLinks = () =>{
     if(currentState){
+      const blurevent = ()=>{
+        document.getElementById('searchBox_div').style.display = 'none'
+      }
+      const focusevent = ()=>{
+        document.getElementById('searchBox_div').style.display = ''
+      }
       return [
         <div className='search' key='0'>
-          <input type="text" className='input_search' placeholder='search' onChange={(e)=>{searchUser(e.target.value)}}/>
-          <div className='searchBox_div'>
+          <input type="text" className='input_search' placeholder='search' onBlur={blurevent} onFocus={focusevent} onChange={(e)=>{searchUser(e.target.value)}}/>
+          <div className='searchBox_div' id='searchBox_div'>
             <table className='position-absolute bg-light w-100 text-center mt-4 border'> 
               {
                 searchData 

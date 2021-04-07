@@ -96,7 +96,7 @@ function Home() {
                                         <Link to={`/profile/${user._id}`}>
                                             <img key={user._id} src={user.profilePic} className='instaRoundImages'/>
                                         </Link>
-                                        <h6 className='mt-2' key={user._id}>{user.name}</h6>
+                                        <h6 className='mt-2 instaRoundImage_username' key={user._id}>{user.name}</h6>
                                     </div>
                                 )
                             })
@@ -111,7 +111,7 @@ function Home() {
                             allPosts.map((post)=>{
                                 return(
                                     <>
-                                        <div className="card" key={post._id} style={{width:"380px", marginBottom:"30px", boxShadow:'1px 1px 2px'}}>
+                                        <div className="card" key={post._id} style={{width:"380px", marginBottom:"30px", boxShadow:'-1px 2px 13px 0px #a2a2a2'}}>
                                             <h4 className="p-2">
                                                 <Link to={post.postedBy._id == userId ? '/profile' : `/profile/${post.postedBy._id}`} style={{textDecoration:'none',color:'black'}}>{post.postedBy.name}
                                                 </Link>

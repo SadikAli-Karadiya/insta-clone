@@ -83,7 +83,7 @@ function Profile() {
     return (
         <>
             <div className="container mt-4">
-                <div className="d-flex" style={{borderBottom:"1px solid lightgray"}}>
+                <div className="d-flex pl-5" style={{borderBottom:"1px solid lightgray"}}>
                     <div className='profile_img_div'>
                             <img src={userProfile.user.profilePic} width="100%" height="100%" />
                         <div className='profile_img_overlay'>
@@ -93,7 +93,7 @@ function Profile() {
                             </Button>                            
                         </div>
                     </div>
-                    <div className="w-100 d-flex flex-column" style={{marginLeft:'150px'}}>
+                    <div className="profile_content_div">
                         <h1>{currentUser}</h1>
                         <h5>{userProfile.user.email}</h5>
                         <div className="d-flex mt-4">

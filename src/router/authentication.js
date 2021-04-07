@@ -1,6 +1,5 @@
 const User = require("../models/Users");
 const express = require("express");
-const router = express.Router();
 const cors = require("cors");
 const validator = require("validator");
 const bcrypt = require('bcryptjs');
@@ -14,6 +13,7 @@ router.use(cors());
 router.use(express.urlencoded({ extended: false }));
 router.use(cookieParser());
 
+const router = express.Router();
 const transporter = nodemailer.createTransport(sendgridTransport({
   auth:{
     api_key:nodemailerAPI_KEY

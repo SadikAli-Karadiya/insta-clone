@@ -1,20 +1,25 @@
-.instaRoundImages{
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    box-shadow: 0 0 0 2px white,
-                0 0 0 4px rgb(235, 101, 217);
+.instaRoundImages {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(235, 101, 217);
 }
-.instaRoundImage_outerdiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+.instaRoundImage_outerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
-.instaRoundImage_innerdiv{
-    display: flex;
-    justify-content: center;
-    margin: 14px;
-    align-items: center;
-    flex-direction: column;
+.instaRoundImage_innerdiv {
+  text-align: center;
+  margin: 15px 5px 15px 10px;
+  width: 80px;
 }
+
+.instaRoundImage_username {
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

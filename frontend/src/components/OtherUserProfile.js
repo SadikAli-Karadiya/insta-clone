@@ -61,34 +61,34 @@ function OtherUserProfile() {
         <>
             
             <div className="container mt-4">
-                <div className="d-flex" style={{borderBottom:"1px solid lightgray"}}>
+                <div className="d-flex pl-5" style={{borderBottom:"1px solid lightgray"}}>
+                
                     <div className='profile_img_div'>
                             <img src={userProfile.user.profilePic} width="100%" height="100%" />
                     </div>
-                    <div className="w-100 d-flex flex-column" style={{marginLeft:'150px'}}>
-                        <div className='d-flex'>
-                            <h1>{userProfile.user.name}</h1>
-                            {
-                                chngFollowUnfollowBtn == true
-                                ?
-                                    <button className='otherUserProfileFollow_btn btn btn-primary mt-1' onClick={()=>{unfollow(userProfile.user._id)}}>
-                                        Unfollow
-                                    </button>
-                                :
-                                    <button className='otherUserProfileFollow_btn btn btn-primary mt-1' onClick={()=>{follow(userProfile.user._id)}}>
-                                        Follow
-                                    </button>
-                            }
-                        </div>
-                        
+
+                    <div className="profile_content_div">
+                        <h1>{userProfile.user.name}</h1>
                         <h5>{userProfile.user.email}</h5>
                         <div className="d-flex mt-4">
                             <h6 className="pr-3">{userProfile.posts.length} Posts</h6>
                             <h6 className="pr-3">{userProfile.user.followers ? userProfile.user.followers.length : 0} Followers</h6>
                             <h6 className="pr-3">{userProfile.user.followings ? userProfile.user.followings.length : 0} Following</h6>
-                        </div>
-                        
-                        
+                        </div>                        
+                    </div>
+
+                    <div className=''>
+                        {
+                            chngFollowUnfollowBtn == true
+                            ?
+                                <button className='otherUserProfileFollow_btn btn btn-primary mt-1' onClick={()=>{unfollow(userProfile.user._id)}}>
+                                    Unfollow
+                                </button>
+                            :
+                                <button className='otherUserProfileFollow_btn btn btn-primary mt-1' onClick={()=>{follow(userProfile.user._id)}}>
+                                    Follow
+                                </button>
+                        }
                     </div>
                 </div>
                 <div className="profile_gallery mt-4 mb-5">

@@ -1,13 +1,19 @@
 .profile_img_div{
-    display: flex;
     border-radius: 50%;
     border: 1px solid black;
     position: relative;
-    height: 160px;
-    width: 20%;
+    height: 145px!important;
+    width:140px!important;
     overflow: hidden;
-    transform: translateX(30%);
     margin-bottom: 30px;
+}
+.profile_img_div img{
+    height: 100%;width:100%
+    
+}
+.profile_content_div{
+    width: fit-content;
+    padding-left: 100px;
 }
 .profile_img_overlay{
     top:0;
@@ -20,7 +26,7 @@
     color: white;
     font-size: 10px;
     padding-top: 35%;
-    padding-left: 18px;
+    padding-left: 14px;
     text-align: center;
 }
 .profile_img_div:hover .profile_img_overlay{
